@@ -52,6 +52,36 @@
                 The dog's age
                 The dog's hobbies-->
 
+        <TextView
+            android:id="@+id/dogName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toStartOf="@+id/dogImage"
+            app:layout_constraintTop_toBottomOf="@id/dogImage"
+            tools:text="Tziel"/>
+
+        <TextView
+            android:id="@+id/dogAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintStart_toStartOf="@+id/dogName"
+            app:layout_constraintTop_toBottomOf="@id/dogName"
+            tools:text="Age: 7"/>
+
+        <TextView
+            android:id="@+id/dogHobby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dogName"
+            tools:text="Hobbies: sunbathing"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
