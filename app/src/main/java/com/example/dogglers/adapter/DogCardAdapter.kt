@@ -24,6 +24,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dogglers.R
 import com.example.dogglers.const.Layout
+import com.example.dogglers.model.Dog
 
 /**
  * Adapter to inflate the appropriate list item layout and populate the view with information
@@ -31,7 +32,8 @@ import com.example.dogglers.const.Layout
  */
 open class DogCardAdapter(
     private val context: Context?,
-    private val layout: Int
+    private val layout: Int,
+    private var dataSet: List<Dog>
 ): RecyclerView.Adapter<DogCardAdapter.DogCardViewHolder>() {
 
     // TODO: Initialize the data using the List found in data/DataSource
@@ -68,14 +70,23 @@ open class DogCardAdapter(
         return DogCardViewHolder(adapterLayout)
     }
 
-    override fun getItemCount(): Int = 0 // TODO: return the size of the data set instead of 0
+    override fun getItemCount(): Int {
+      return dataSet.size
+    } // TODO: return the size of the data set instead of 0
 
     override fun onBindViewHolder(holder: DogCardViewHolder, position: Int) {
         // TODO: Get the data at the current position
         // TODO: Set the image resource for the current dog
         // TODO: Set the text for the current dog's name
         // TODO: Set the text for the current dog's age
-        val resources = context?.resources
+
+        //val resources = context?.resources
+        val item = dataSet[position]
+        holder.imageView.setImageResource(item.imageResourceId)
+        holder.nameTextView.text = context?.resources?.getString(item.name)
+        holder.ageTextView.text = context?.resources?.getString(R.string.dog_age)
+        holder.hobbyTextView.text = context?.resources?.getString(R.string.dog_hobbies)
+
         // TODO: Set the text for the current dog's hobbies by passing the hobbies to the
         //  R.string.dog_hobbies string constant.
         //  Passing an argument to the string resource looks like:
