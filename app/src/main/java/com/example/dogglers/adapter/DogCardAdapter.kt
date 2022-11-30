@@ -24,7 +24,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dogglers.R
 import com.example.dogglers.const.Layout
-import com.example.dogglers.model.Dog
+import com.example.dogglers.data.DataSource
+
 
 /**
  * Adapter to inflate the appropriate list item layout and populate the view with information
@@ -32,12 +33,12 @@ import com.example.dogglers.model.Dog
  */
 open class DogCardAdapter(
     private val context: Context?,
-    private val layout: Int,
-    private val dataset: List<Dog>
+    private val layout: Int
 ): RecyclerView.Adapter<DogCardAdapter.DogCardViewHolder>() {
 
     // TODO: Initialize the data using the List found in data/DataSource
 
+    private val dataset = DataSource.dogs
 
     /**
      * Initialize view elements
