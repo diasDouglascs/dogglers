@@ -16,6 +16,7 @@
 package com.example.dogglers.model
 
 import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 
 /**
  * A data class to represent the information presented in the dog card
