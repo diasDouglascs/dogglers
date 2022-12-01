@@ -34,7 +34,7 @@ object DataSource {
             R.drawable.leroy,
             "Leroy",
             "4",
-            "sleeping in dangerous places"
+            "sleeping"
         ),
         Dog(
             R.drawable.frankie,

@@ -76,11 +76,15 @@
             android:id="@+id/dogHobby"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.952"
+            app:layout_constraintStart_toEndOf="@id/dogAge"
             app:layout_constraintTop_toBottomOf="@id/dogName"
-            tools:text="Hobbies: sunbathing"/>
+            tools:text="Hobbies: sunbathing"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
